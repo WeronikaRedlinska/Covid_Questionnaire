@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>{%block title%}Wiedza na temat szczepionek{%endblock%}</title>
+<form method ="post">
+    <p> Jakiego typu szczepionką jest Comirnaty firmy Pfizer/BionTech?</p>
+    <input type="radio" id="mRNA" name="type" value="mRNA" required="required">
+    <label for="mRNA">mRNA</label>
+    <input type="radio" id="vector" name="type" value="vector" required="required">
+    <label for="vector">Wektorowa</label>
+    <input type="radio" id="dead" name="type" value="dead" required="required">
+    <label for="dead">Zabita</label>
+    <input type="radio" id="alive" name="type" value="allive" required="required">
+    <label for="alive">Żywa</label>
+    <input type="radio" id="idk" name="type" value="idk" required="required">
+    <label for="idk">Nie wiem</label>
+    <p>Czy szczepionka mRNA może zmodyfikować DNA osoby zaszczepionej?</p>
+    <input type="radio" id="yes" name="modify" value="yes" required="required">
+    <label for="yes">Tak</label>
+    <input type="radio" id="no" name="modify" value="no" required="required">
+    <label for="no">Nie</label>
+    <input type="radio" id="idk" name="modify" value="idk" required="required">
+    <label for="idk">Nie wiem</label>
+    <p>Czy szczepionki mogą wpływać na rozwój chorób autoimmunologicznych?</p>
+    <input type="radio" id="yes1" name="auto" value="yes" required="required">
+    <label for="yes1">Tak</label>
+    <input type="radio" id="no1" name="auto" value="no" required="required">
+    <label for="no1">Nie</label>
+    <input type="radio" id="idk1" name="auto" value="idk" required="required">
+    <label for="idk1">Nie wiem</label>
+    <p>Czy szczepionki mogą powodować reakcje alergiczne?</p>
+    <input type="radio" id="yes2" name="allergy" value="yes" required="required">
+    <label for="yes2">Tak</label>
+    <input type="radio" id="no2" name="allergy" value="no" required="required">
+    <label for="no2">Nie</label>
+    <input type="radio" id="idk2" name="allergy" value="idk" required="required">
+    <label for="idk2">Nie wiem</label>
+    <p>Czy uważasz, że szczepionki ogólnie są bezpieczne?</p>
+    <input type="radio" id="yes3" name="safe" value="yes" required="required">
+    <label for="yes3">Tak</label>
+    <input type="radio" id="no3" name="safe" value="no" required="required">
+    <label for="no3">Nie</label>
+    <input type="radio" id="idk3" name="safe" value="idk" required="required">
+    <label for="idk3">Nie wiem</label>
+    <p> Czy uważasz, że szczepionki przeciwko COVID-19 są bezpieczne?</p>
+    <input type="radio" id="yes4" name="safe1" value="yes" required="required">
+    <label for="yes4">Tak</label>
+    <input type="radio" id="no4" name="safe1" value="no" required="required">
+    <label for="no4">Nie</label>
+    <input type="radio" id="idk4" name="safe1" value="idk" required="required">
+    <label for="idk4">Nie wiem</label>
+    <p>
+    <button type="submit">Zakończ</button>
+    </p>
+
+</form>
+{%endblock%}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <title>{%block title%}Generalne informacje o zachorowaniu na COVID-19{%endblock%}</title>
+<form method ="post">
+        <p>Czy zachorowałeś/aś na COVID-19?</p>
+        <input type="radio" id="y" name="disease" value="yes" required="required">
+        <label for="y">Tak</label><br>
+        <input type="radio" id="n" name="disease" value="no" required="required">
+        <label for="n">Nie</label><br>
+        <p>Jak oceniasz przebieg choroby?</p>
+        <input type="radio" id="none" name="mileage" value="none" required="required">
+        <label for="none">Nie dotyczy</label><br>
+        <input type="radio" id="easy" name="mileage" value="easy" required="required">
+        <label for="easy">Lekki</label><br>
+        <input type="radio" id="medium" name="mileage" value="medium" required="required">
+        <label for="medium">Średni</label><br>
+        <input type="radio" id="hard" name="mileage" value="hard" required="required">
+        <label for="hard">Ciężki</label><br>
+        <p>
+        <button type="submit" >Przejdź dalej</button>
+        </p>
+        </form>
+
+{% endblock%}

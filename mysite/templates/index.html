@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Respondenci: {% endblock %}</h1>
+    <div class="content">
+        {% for student in students %}
+            <div class="student">
+                <p><b>#{{ student.id }}</b></p>
+                <p>Dołączył: {{ student.created_at }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2 style="width: 100%">{% block title %} Jesteśmy studentami III roku Inżynierii Biomedycznej na Politechnice Gdańskiej.<br> Zbieramy informacje na temat wiedzy na temat szczepionek oraz wyszczepienia ludzi przeciwko COVID-19 <br> Prosimy, aby uważnie czytać pytania, gdyż nie można się w ankiecie cofać.<br> Serdecznie zapraszamy do wypełnienia ankiety.{% endblock %}</h2> <br>
+
+    {{message}}
+
+    <form method="post">
+        <br>
+        <p>
+        <label for="university">Czy jesteś studentem/tką Politechniki Gdańskiej?</label><br>
+        <input type="radio" name="university" value="yes" required="required"> Tak</input><br>
+        <input type="radio" name="university" value="no" required="required"> Nie</input><br>
+        </p>
+
+        <p>
+          <label for="gender">Płeć</label><br>
+          <input type="radio" name="gender" value="female" required="required"> Kobieta</input><br>
+          <input type="radio" name="gender" value="male" required="required"> Mężczyzna</input><br>
+          <input type="radio" name="gender" value="other" required="required"> Inna</input><br>
+        </p>
+
+         <p>
+            <label for="age">Wiek</label>
+            <input type="number" name="age"
+                   placeholder="Age" required>
+            </input>
+        </p>
+
+        <p>
+          <label for="education"> Wykształcenie</label><br>
+          <input type="radio" name="education" value="primary" required="required"> Podstawowe</input><br>
+          <input type="radio" name="education" value="vocational" required="required"> Zasadnicze zawodowe</input><br>
+          <input type="radio" name="education" value="secondary" required="required"> Średnie</input><br>
+          <input type="radio" name="education" value="higher" required="required"> Wyższe</input><br>
+        </p>
+
+        <p>
+            <label fro="status">Status zawodowy</label><br>
+            <input type="radio" name="status" value="Schoolboy" required="required"> Uczeń</input><br>
+          <input type="radio" name="status" value="Student" required="required"> Student</input><br>
+          <input type="radio" name="status" value="unemployed" required="required"> Bezrobotny</input><br>
+          <input type="radio" name="status" value="remployed" required="required">Zatrudniony</input><br>
+        </p>
+
+        <p>
+          <label for="city"> Wielkość miejscowości, z której pochodzisz</label><br>
+          <input type="radio" name="city" value="countryside" required="required"> Wieś</input><br>
+          <input type="radio" name="city" value="smallcity" required="required"> Miasto do 50 000 mieszkańców</input><br>
+          <input type="radio" name="city" value="mediumcity" required="required"> Miasto od 50 000 do 250 000 mieszkańców</input><br>
+          <input type="radio" name="city" value="largecity" required="required"> Miasto powyżej 250 000 mieszkańców</input><br>
+        </p>
+
+        <p>
+            <label for="vaccine">Czy zaszczepiłeś/eś się przeciwko COVID-19?</label><br>
+            <input type="radio" id="yes" name="vaccine" value ="yes" required="required">
+            <label for="yes"> Tak</label><br>
+            <input type="radio" id="no" name="vaccine" value ="no" required="required">
+            <label for="no"> Nie</label><br>
+        </p>
+        <p>
+            <button type ="submit" >Przejdź dalej</button>
+        </p>
+
+    </form>
+
+
+{% endblock %}

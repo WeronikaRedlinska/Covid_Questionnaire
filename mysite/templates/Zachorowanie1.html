@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <title>{%block title%}Generalne informacje o zachorowaniu na COVID-19{%endblock%}</title>
+<form method ="post">
+        <p>Czy zachorowałeś/aś na COVID-19?</p>
+        <input type="radio" id="y" name="disease" value="yes" required="required">
+        <label for="y">Tak</label><br>
+        <input type="radio" id="n" name="disease" value="no" required="required">
+        <label for="n">Nie</label><br>
+        <p>Zachorowałeś/aś przed czy po zaszczepieniu?</p>
+        <input type="radio" id="none" name="time" value="none" required="required">
+        <label for="none">Nie dotyczy</label><br>
+        <input type="radio" id="before" name="time" value="before" required="required">
+        <label for="before">Przed</label><br>
+        <input type="radio" id="after" name="time" value="after" required="required">
+        <label for="after">Po</label><br>
+        <input type="radio" id="both" name="time" value="both">
+        <label for="both">Zarówno przed jak i po</label><br>
+        <p>Jak oceniasz przebieg choroby przed zaszczepieniem?</p>
+        <input type="radio" id="none" name="mileage" value="none" required="required">
+        <label for="none">Nie dotyczy</label><br>
+        <input type="radio" id="easy" name="mileage" value="easy" required="required">
+        <label for="easy">Lekki</label><br>
+        <input type="radio" id="medium" name="mileage" value="medium" required="required">
+        <label for="medium">Średni</label><br>
+        <input type="radio" id="hard" name="mileage" value="hard" required="required">
+        <label for="hard">Ciężki</label><br>
+        <p>Jak oceniasz przebieg choroby po zaszczepieniu?</p>
+        <input type="radio" id="none" name="mileage2" value="none" required="required">
+        <label for="none">Nie dotyczy</label><br>
+        <input type="radio" id="easy" name="mileage2" value="easy" required="required">
+        <label for="easy">Lekki</label><br>
+        <input type="radio" id="medium" name="mileage2" value="medium" required="required">
+        <label for="medium">Średni</label><br>
+        <input type="radio" id="hard" name="mileage2" value="hard" required="required">
+        <label for="hard">Ciężki</label><br>
+        <p>
+        <button type="submit" >Przejdź dalej</button>
+        </p>
+        </form>
+
+{% endblock%}
